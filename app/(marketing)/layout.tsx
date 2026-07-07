@@ -10,7 +10,7 @@ import { useLang } from "@/components/i18n/language-provider";
 export default function MarketingLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
-  const { ui } = useLang();
+  const { ui, lang } = useLang();
   return (
     <div className="flex min-h-dvh flex-col">
       <header className="sticky top-0 z-30 border-b border-border bg-background/80 backdrop-blur">
@@ -19,6 +19,9 @@ export default function MarketingLayout({
             <Logo />
           </Link>
           <nav className="ml-auto hidden items-center gap-7 text-sm font-medium text-muted-foreground md:flex">
+            <Link href="/ara" className="hover:text-foreground transition-colors">
+              {lang === "tr" ? "İlanlar" : "Listings"}
+            </Link>
             <a href="#features" className="hover:text-foreground transition-colors">{ui.features}</a>
             <a href="#how" className="hover:text-foreground transition-colors">{ui.howItWorks}</a>
             <a href="#pricing" className="hover:text-foreground transition-colors">{ui.pricing}</a>

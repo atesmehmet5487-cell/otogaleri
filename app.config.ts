@@ -164,6 +164,8 @@ export const appConfig: AppConfig = {
       items: [
         { label: { tr: "Panel", en: "Dashboard" }, href: "/dashboard", icon: "layout-dashboard" },
         { label: { tr: "Envanter", en: "Inventory" }, href: "/inventory", icon: "car-front" },
+        { label: { tr: "İlanlar", en: "Listings" }, href: "/listings", icon: "list" },
+        { label: { tr: "Yeni İlan", en: "New Listing" }, href: "/ilan-ekle", icon: "plus-circle" },
         { label: { tr: "Müşteriler", en: "Leads" }, href: "/leads", icon: "message-square-text", badge: { tr: "9", en: "9" } },
       ],
     },
